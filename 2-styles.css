@@ -1,31 +1,29 @@
 :root {
-  --switch-size: 45px;
-}
-
-body {
-  padding-top: 10px;
+  --toggle-size: 45px;
+  --translateY: -45px;
 }
 
 .toggle {
-  transform: translateX(100px);
-  display: flex;
+  margin: 10rem;
 }
+
 .toggle-label {
   position: relative;
+  cursor: pointer;
 }
 
 .toggle-inner {
-  width: calc(var(--switch-size) * 2);
-  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: calc(var(--toggle-size) * 2.2);
+  height: 35px;
   border: 2px solid rgb(177, 177, 177);
   background: rgb(235, 235, 235);
   border-radius: 30px;
   color: rgb(124, 124, 124);
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 .toggle-cb:checked + .toggle-label .toggle-inner {
@@ -34,20 +32,19 @@ body {
 }
 
 .toggle-cb:checked + .toggle-label .toggle-switch {
-  transform: translateX(calc(var(--switch-size) * 1))
-    translateY(calc(var(--switch-size) * -1));
+  transform: translateX(calc(var(--toggle-size) * 1.2))
+    translateY(var(--translateY));
 }
 
 .toggle-switch {
-  width: var(--switch-size);
-  height: var(--switch-size);
+  width: var(--toggle-size);
+  height: var(--toggle-size);
   border: 2px solid darkgray;
   background: rgb(255, 255, 255);
-  border-radius: 50%;
+  border-radius: 100%;
   position: absolute;
-  top: 37px;
-  transform: translateY(calc(var(--switch-size) * -1));
-  cursor: pointer;
+  top: 40px;
+  transform: translateY(var(--translateY));
 }
 
 .toggle-inner::before {

@@ -18,17 +18,17 @@
   justify-content: space-evenly;
   width: calc(var(--toggle-size) * 2.2);
   height: 35px;
-  border: 2px solid rgb(177, 177, 177);
-  background: rgb(235, 235, 235);
+  border: 2px solid #c3c3c3;
+  background: #ebebeb;
   border-radius: 30px;
-  color: rgb(124, 124, 124);
+  color: #c3c3c3;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
 .toggle-cb:checked + .toggle-label .toggle-inner {
-  background: rgb(225, 1, 60);
-  color: rgb(255, 255, 255);
+  background: #d0546b;
+  color: #fff;
 }
 
 .toggle-cb:checked + .toggle-label .toggle-switch {
@@ -40,7 +40,7 @@
   width: var(--toggle-size);
   height: var(--toggle-size);
   border: 2px solid darkgray;
-  background: rgb(255, 255, 255);
+  background: #fff;
   border-radius: 100%;
   position: absolute;
   top: 40px;

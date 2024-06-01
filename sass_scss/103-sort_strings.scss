@@ -1,5 +1,6 @@
 /* Sorting and printing a list in Sass */
 
-$sorted_list: sort($list_to_sort);
+// Sort the list
+$list_sorted: sort($list_to_sort);
 
-@debug $sorted_list;
+@debug $list_to_sort;

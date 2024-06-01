@@ -1,38 +1,8 @@
 /* Sorting and printing a list in Sass */
 
-// Define the list to be sorted
-$list_to_sort: 5, 2, 9, 1, 8, 3, 7, 4, 6;
+@import '103-sort_list';
 
-// Define a function to find the minimum value index in a list
-@function min-index($list) {
-  $min: nth($list, 1);
-  $index: 1;
+// Sort the list
+$list_sorted: sort($list_to_sort);
 
-  @for $i from 2 through length($list) {
-    $value: nth($list, $i);
-    @if $value < $min {
-      $min: $value;
-      $index: $i;
-    }
-  }
-
-  @return $index;
-}
-
-// Define a function to sort the list
-@function sort($list) {
-  $sorted-list: ();
-
-  @for $i from 1 through length($list) {
-    $index: min-index($list);
-    $value: nth($list, $index);
-    $sorted-list: append($sorted-list, $value);
-    $list: remove($list, $index);
-  }
-
-  @return $sorted-list;
-}
-
-// Sort the list and print the sorted list in debug output
-$sorted-list: sort($list_to_sort);
-@debug "Sorted list: #{$sorted-list}";
+@debug $list_to_sort;

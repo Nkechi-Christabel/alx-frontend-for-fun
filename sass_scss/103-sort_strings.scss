@@ -1,8 +1,31 @@
 /* Sorting and printing a list in Sass */
 
-@import '103-sort_list';
+// Define the list to be sorted
+$list_to_sort: john, anna, zoe, kim, felicia, carrier;
 
-// Sort the list
-$list_sorted: sort($list_to_sort);
+// Define a function to sort the list
+@function sort($list) {
+  $sorted-list: ();
 
-@debug $list_to_sort;
+  @for $i from 1 through length($list) {
+    $min: nth($list, 1);
+    $index: 1;
+
+    @for $j from 2 through length($list) {
+      $value: nth($list, $j);
+      @if $value < $min {
+        $min: $value;
+        $index: $j;
+      }
+    }
+
+    $sorted-list: append($sorted-list, $min);
+    $list: join(nth($list, 1, $index - 1), nth($list, $index + 1, length($list)), comma);
+  }
+
+  @return $sorted-list;
+}
+
+// Sort the list and print the sorted list in debug output
+$sorted-list: sort($list_to_sort);
+@debug "Sorted list: #{$sorted-list}";

@@ -1,6 +1,7 @@
 /* Sorting and printing a list in Sass */
 
-// Sort the list
+$list_to_sort: 5, 2, 9, 1, 8, 3, 7, 4, 6;
+
 $list_sorted: sort($list_to_sort);
 
 @debug $list_to_sort;

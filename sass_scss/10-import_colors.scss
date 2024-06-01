@@ -1,0 +1,17 @@
+/* Main Sass file */
+
+// Import the file with color variables
+@import '10-colors';
+
+// Assign colors to classes
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}

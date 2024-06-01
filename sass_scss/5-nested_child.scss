@@ -1,0 +1,11 @@
+/* Styles for body text colors and first child .red class */
+
+body {
+  color: #3D3D3D;
+
+  .red {
+    &:first-child {
+      color: #FF0000;
+    }
+  }
+}

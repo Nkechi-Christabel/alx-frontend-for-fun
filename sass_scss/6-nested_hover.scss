@@ -1,0 +1,9 @@
+/* Styles for button text colors and hover effect */
+
+button {
+  color: #FF0000;
+
+  &:hover {
+    color: #00FF00;
+  }
+}

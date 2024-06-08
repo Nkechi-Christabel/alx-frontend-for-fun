@@ -1,0 +1,12 @@
+/* Nesting css selectors to assign values. */
+
+$text-color: #3D3D3D;
+$bg-color: #6D6D6D;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  p {
+    margin: 10px;
+  }
+}

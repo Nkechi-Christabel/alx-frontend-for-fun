@@ -1,0 +1,9 @@
+/* Main Sass file for sorting strings */
+
+// Import the file with the list to sort
+@import '103-sort_list';
+
+// Sort the list
+$list_sorted: sort($list_to_sort);
+
+@debug $list_to_sort;

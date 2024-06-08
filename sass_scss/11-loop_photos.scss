@@ -1,0 +1,11 @@
+/* Main Sass file */
+
+// Import the file with list of names
+@import 'list-names';
+
+// Use @each to generate classes and assign background images
+@each $name in $list-names {
+  .#{$name} {
+    background-image: url('#{$name}.jpg');
+  }
+}

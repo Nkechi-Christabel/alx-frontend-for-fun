@@ -1,0 +1,7 @@
+/* Creating H* tags with font size based on heading level */
+
+@for $i from 1 through 5 {
+  h#{$i} {
+    font-size: $i * 1px;
+  }
+}
